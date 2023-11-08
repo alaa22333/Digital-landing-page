@@ -17,11 +17,35 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ scroll-behavior: smooth;
+}
+
+@layer components {
+.center {
+  @apply flex justify-center items-center
+}
+.between {
+  @apply flex  justify-between items-center
+}
+.start {
+  @apply flex  justify-start items-start
+}
+.blur1 {
+    @apply md:w-[100px] h-[100px] w-[200px] rounded-full absolute -z-10 bg-primary2;
+
+    filter: blur(20px);
+    -webkit-filter: blur(120px);
+  }
+.blur2 {
+    @apply md:w-[100px] h-[100px] w-[200px]  rounded-full absolute -z-10 bg-secondary;
+
+    filter: blur(20px);
+    -webkit-filter: blur(120px);
+  }
+ 
+  .main-btn{
+    @apply py-2 md:px-6 px-4  bg-primary2 text-white md:text-sm text-xs center rounded-lg hover:bg-primary2/50 font-medium ;
+   box-shadow:   0px 4px 10px 0px rgba(255, 0, 0, 0.53);  
+  }
+
 }
