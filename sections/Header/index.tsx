@@ -13,13 +13,13 @@ const Header = () => {
   const { selectedPage, setSelectedPage, setShowNav, showNav,setIsOpen,isOpen } =
     useMainContext();
 
-  useEffect(() => {
-    const scrollEvent: () => void = window.addEventListener("scroll", () => {
-      const height = window.pageYOffset;
-      height >= 400 ? setShowNav(true) : setShowNav(false);
-    });
-    return () => window.removeEventListener("scroll", scrollEvent);
-  });
+  // useEffect(() => {
+  //   const scrollEvent: () => void = window.addEventListener("scroll", () => {
+  //     const height = window.pageYOffset;
+  //     height >= 400 ? setShowNav(true) : setShowNav(false);
+  //   });
+  //   return () => window.removeEventListener("scroll", scrollEvent);
+  // });
     const isMatch = useMediaQuery("(min-width: 600px)");
 
 
@@ -79,7 +79,7 @@ const Header = () => {
       ) : (
         <Image
           src={bar}
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpen(true)}
           className="cursor-pointer"
           alt="toggle"
         />

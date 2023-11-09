@@ -1,9 +1,8 @@
 import React from "react";
 import fb from'@/public/Facebook.svg';
-import wix from'@/public/wix.svg';
 import YouTube from'@/public/YouTube.svg';
 import instagram from'@/public/Instagram.svg';
-import google from'@/public/google.svg';
+import google from'@/public/Google.svg';
 import Image from "next/image";
 
 const Sponsors = () => {

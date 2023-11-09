@@ -73,7 +73,7 @@ const Hero = () => {
             <button className="main-btn"> Get Started</button>
             <button className="between   md:text-sm text-xs py-2 md:px-5  font-medium  text-white bg-none gap-3">
               {" "}
-              <Image src={start} />
+              <Image alt="start" src={start} />
               See Our Progress
             </button>
           </motion.div>
