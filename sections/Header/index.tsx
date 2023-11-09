@@ -25,6 +25,7 @@ const Header = () => {
 
   return (
     <motion.nav
+      viewport={{ once: true }}
       initial={{
         y: 100,
         opacity: 0,
@@ -39,12 +40,10 @@ const Header = () => {
         },
       }}
       className={`  bg-primary1${
-        
         showNav &&
         "  shadow-sm bg-primary1 shadow-primary1 duration-500 transition  "
       }    between md:px-md px-x py-5 rounded-lg  gap-10 left-0 fixed top-0 w-full`}
     >
-     
       <Image
         alt="logo"
         src={logo}

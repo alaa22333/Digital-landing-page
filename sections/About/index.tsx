@@ -19,6 +19,7 @@ const About = () => {
 
       <div className={`between mt-10 gap-5 md:gap-0 flex-col md:flex-row `}>
         <motion.div
+          viewport={{ once: true }}
           initial={{
             y: 200,
             opacity: 0,
@@ -37,6 +38,7 @@ const About = () => {
           <Image alt="about" src={who} />
         </motion.div>
         <motion.div
+          viewport={{ once: true }}
           initial={{
             x: 100,
             opacity: 0,

@@ -28,6 +28,7 @@ const Services = () => {
             } `}
           >
             <motion.div
+              viewport={{ once: true }}
               initial={{
                 x: direction === "left" ? 100 : -100,
                 opacity: 0,
@@ -49,6 +50,7 @@ const Services = () => {
               />
             </motion.div>
             <motion.div
+              viewport={{ once: true }}
               initial={{
                 x: direction === "right" ? 100 : -100,
                 opacity: 0,

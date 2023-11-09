@@ -12,6 +12,7 @@ const Sidebar = () => {
   return (
     isOpen && (
       <motion.div
+        viewport={{ once: true }}
         initial={{
           y: -100,
           opacity: 0,
@@ -21,7 +22,7 @@ const Sidebar = () => {
           opacity: 1,
           transition: {
             type: "easeIn",
-            duration: .5,
+            duration: 0.5,
             delay: 0.3,
           },
         }}
@@ -52,7 +53,7 @@ const Sidebar = () => {
                   href={hash}
                   onClick={() => {
                     setSelectedPage(title);
-                    setIsOpen(!isOpen)
+                    setIsOpen(!isOpen);
                   }}
                 >
                   {title}
@@ -60,7 +61,9 @@ const Sidebar = () => {
               </li>
             );
           })}
-          <button type='button' className="main-btn w-[90%] py-3 mt-7">Contact Us</button>
+          <button type="button" className="main-btn w-[90%] py-3 mt-7">
+            Contact Us
+          </button>
         </ul>
       </motion.div>
     )

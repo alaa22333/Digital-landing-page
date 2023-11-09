@@ -14,6 +14,7 @@ const Review = () => {
       >
         {" "}
         <motion.div
+          viewport={{ once: true }}
           className="md:w-1/2 w-full "
           initial={{
             y: 50,

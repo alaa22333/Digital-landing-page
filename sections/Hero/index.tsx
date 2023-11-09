@@ -17,6 +17,7 @@ const Hero = () => {
         {/* left */}
         <div className="md:w-[700px] flex flex-col gap-3">
           <motion.h1
+            viewport={{ once: true }}
             initial={{
               x: -100,
               opacity: 0,
@@ -36,6 +37,7 @@ const Hero = () => {
             proven marketing strategies, executed by experts.
           </motion.h1>
           <motion.p
+            viewport={{ once: true }}
             initial={{
               x: -100,
               opacity: 0,
@@ -55,6 +57,7 @@ const Hero = () => {
             about helping businesses succeed.
           </motion.p>
           <motion.div
+            viewport={{ once: true }}
             initial={{
               x: -100,
               opacity: 0,
@@ -80,6 +83,7 @@ const Hero = () => {
         </div>
         {/* right */}
         <motion.div
+          viewport={{ once: true }}
           initial={{
             y: 200,
             opacity: 0,
