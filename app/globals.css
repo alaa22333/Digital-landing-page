@@ -2,21 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+ @apply bg-primary1
   }
 }
 
 body {
+ 
  scroll-behavior: smooth;
 }
 
@@ -31,13 +26,13 @@ body {
   @apply flex  justify-start items-start
 }
 .blur1 {
-    @apply md:w-[100px] h-[100px] w-[200px] rounded-full absolute -z-10 bg-primary2;
+    @apply w-[100px]  h-[100px]  rounded-full absolute -z-10 bg-primary2;
 
     filter: blur(20px);
-    -webkit-filter: blur(120px);
+    -webkit-filter: blur(90px);
   }
 .blur2 {
-    @apply md:w-[100px] h-[100px] w-[200px]  rounded-full absolute -z-10 bg-secondary;
+    @apply w-[100px] h-[100px]   rounded-full absolute -z-10 bg-secondary;
 
     filter: blur(20px);
     -webkit-filter: blur(120px);

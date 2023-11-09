@@ -17,11 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-primary1 md:pt-36 pt-20 ${hankenGrotesk.className}`}>
+      <body className={`bg-primary1 md:pt-10 pt-20 ${hankenGrotesk.className}`}>
         <ContextProvider>
           {children}
-          <div className="blur1 left-0 top-10   " />
-          <div className="blur2 right-0 top-10   " />
         </ContextProvider>
       </body>
     </html>

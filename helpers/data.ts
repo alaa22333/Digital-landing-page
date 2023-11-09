@@ -5,12 +5,12 @@ import peolpe from "@/public/people.svg";
 import result from "@/public/result.svg";
 export const links = [
   { title: "Home", hash: "#home" /*  icon: AiOutlineHome  */ },
-  { title: "About", hash: "#about" /* icon: FaUserAlt */ },
-  { title: "Work", hash: "#work" /* icon: IoMdCreate */ },
   {
     title: "Services",
     hash: "#services" /* icon: AiOutlineFundProjectionScreen */,
   },
+  { title: "About", hash: "#about" /* icon: FaUserAlt */ },
+  { title: "Work", hash: "#work" /* icon: IoMdCreate */ },
 ] as const;
 
 export const services = [

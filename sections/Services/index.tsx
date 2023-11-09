@@ -6,31 +6,64 @@ import check from "@/public/check.svg";
 import Heading from "../UsableComponets";
 import { motion } from "framer-motion";
 import { useMainContext } from "@/context/main-context";
+
 const Services = () => {
   const { setSelectedPage } = useMainContext();
 
   return (
-    <main
+    <motion.main
       onViewportEnter={() => setSelectedPage("Services")}
       id="services"
-      className="md:px-md px-x  scroll-mt-10 my-[100px]  center flex-col gap-6"
+      className="md:px-md px-x  scroll-mt-32 md:my-[200px] my-[50px]   center flex-col gap-6"
     >
-      <Heading title={"Who"} subTitle={"Are We ?"} />
+      <Heading title={"Services"} subTitle={"we can do to you"} />
+
       {services.map((ele, i) => {
         const { img, heading, subHeadings, direction } = ele;
         return (
-          <div
+          <motion.div
             key={i}
-            className={`between flex-col ${
+            className={`between flex-col gap-5  ${
               direction === "left" ? "md:flex-row-reverse " : "md:flex-row"
             } `}
           >
-            <Image
-              className="md:w-[500px] w-[200px] "
-              src={img}
-              alt="service"
-            />
-            <div className="start gap-5 flex-col lg:w-[600px]">
+            <motion.div
+              initial={{
+                x: direction === "left" ? 100 : -100,
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+                transition: {
+                  type: "spring",
+                  duration: 1,
+                  delay: 0.2 * i,
+                },
+              }}
+            >
+              <Image
+                className="md:w-[500px] w-[300px] "
+                src={img}
+                alt="service"
+              />
+            </motion.div>
+            <motion.div
+              initial={{
+                x: direction === "right" ? 100 : -100,
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+                transition: {
+                  type: "spring",
+                  duration: 1,
+                  delay: 0.2 * i,
+                },
+              }}
+              className="start gap-5 flex-col lg:w-[600px]"
+            >
               <h1 className="text-secondary md:text-h2 text-h3 ">{heading}</h1>
               <div className="flex flex-col  gap-3">
                 {subHeadings.map((ele, i) => {
@@ -52,11 +85,11 @@ const Services = () => {
                   );
                 })}
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         );
       })}
-    </main>
+    </motion.main>
   );
 };
 
